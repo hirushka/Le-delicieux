@@ -1,0 +1,252 @@
+<html>
+<head>
+    <style>
+     body{
+            background-color: #616161;
+        }
+         h2{
+      text-align: center;
+        margin-top:50px;
+        color: #ff9100;
+        font-family:monospace;
+    }
+        td{
+            color:#ff9100;
+        }
+        
+        fieldset{
+            border-color: darkorange;
+            margin-left: 200px;
+            margin-right: 200px;
+            background:linear-gradient(to right,#424242,#9e9e9e,#ffcc80,#f57c00);
+        }
+        
+        input[type=text]{
+            background-color: #9e9e9e;
+            border:1px solid black;
+             padding:15px;
+            border-radius: 5px;
+        }
+            .bottom{
+    color:darkorange;
+ 
+    background-color:#424242;
+    padding:px;
+    text-align: center;
+    border-radius: 10px;
+}
+        
+        input[type=tel]{
+             background-color: #9e9e9e;
+            border:1px solid black;
+             padding:15px;
+            border-radius: 5px;
+        }
+        input[type=email]{
+             background-color: #9e9e9e;
+            border:1px solid black;
+             padding:15px;
+            border-radius: 5px;
+        }
+        
+       input{
+            background-color: #9e9e9e;
+             border:1px solid black;
+        }
+        
+        .course input{
+            background-color: #9e9e9e;
+             border:1px solid black;
+        }
+        
+        textarea{
+             background-color: #9e9e9e;
+            border:1px solid black;
+            border-radius: 5px;
+            }
+        
+            .button a{
+        text-decoration: none;
+        color:#e65100;    
+        font-size:25px;
+                font-weight: bold;
+    }
+    
+    .button{
+           background-color:transparent;
+        background-repeat: no-repeat;
+       border-color:#e65100;
+        border-radius: 5px; 
+        text-decoration: none;
+        color: #e65100;
+        font-weight: bold;
+    }
+    
+        .buttongrp{
+            float: right;
+        }
+        
+    
+    </style>
+    
+    <script>
+        
+    function validateForm(){
+        
+        
+        var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        var phone=document.getElementById("phone").vlaue;
+        var email=document.getElementById("email").value;
+        
+        
+        if(fname=="" || lname=="" || email=="" || phone=="" ){
+            alert("Information required");
+            return false;
+        }
+        
+        
+       else if(phone!="" || email==""){
+            validatePhone(phone);
+             validateEmail(email);
+        }
+    }
+        
+        function validatePhone(phone){
+           
+            
+            if(isNaN(phone)){
+                alert("Invalid format");
+                return false;
+            }
+            else if(phone.length!=10){
+                alert("Invalid format");
+                return false;
+            
+            }
+        }
+        
+     function validateEmail(email){
+	
+	//var email=document.getElementById("email").value;
+	var email_length=email.length;
+	var position_at=email.indexOf("@");
+	var position_dot=email.lastIndexOf(".");
+	
+         if(position_at<1 || position_dot<position_at+2 || position_dot+2>=email_length){
+	alert("Invalid Email format");
+	return false;
+	}
+}
+    </script>
+    
+    
+    </head>
+<body>
+    
+    <h2>Register Now</h2>
+        
+        <fieldset>
+        <form method="post" onsubmit="return validateForm();"> 
+            <table>
+                <tr>
+                    <td>
+            First Name:
+                    </td>
+                    <td>
+                <input type="text" name="fname" id="fname"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+            Last name:
+                    </td>
+                    <td>
+                <input type="text" name="lname" id="lname"><br>
+                    </td>
+                </tr>
+                <tr>
+                <td>    
+            Phone number:
+                </td>
+                <td>
+                <input type="tel" name="phone" id="phone"><br>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+            Email:
+                    </td>
+                    <td>
+                <input type="email" name="email" id="email"><br>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+            Sex:
+                    </td>
+                    <td>
+                        <div class="sex">
+                        Male
+           <input type="radio" name="sex" id="sex" value="male">
+                        &nbsp;Female
+                        <input type="radio" name="sex" id="sex" value="female">
+                        </div>
+                    </td>
+                </tr>
+                    <tr>
+                <td>
+                        Selected course:
+                        </td>
+                        <td>
+                            <label class="course">
+                Bronze
+                        <input type="radio" name="course" id="course" value="bronze">
+                        &nbsp;
+                Silver
+                        <input type="radio" name="course" id="course" value="silver">&nbsp;
+                Gold
+                    <input type="radio" name="course" id="course"  value="gold">&nbsp;
+                Platinum
+                        <input type="radio" name="course" id="course" value="platinum">
+                            </label>
+                </td>
+                               
+                </tr>
+                <tr>
+                <td>
+                    
+                    Days prefered:
+                    </td>
+                    <td>
+                        <div class="day">
+                    SUN<input type="checkbox" name="day" id="day" value="sun">
+                    MON<input type="checkbox" name="day" id="day" value="mon">
+                    TUE<input type="checkbox" name="day" id="day" value="tue">
+                    WED<input type="checkbox" name="day" id="day" value="wed">
+                    THU<input type="checkbox" name="day" id="day" value="thu">
+                    FRI<input type="checkbox" name="day" id="day" value="fri">
+                    SAT<input type="checkbox" name="day" id="day" value="sat"> 
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="buttongrp">
+            <input type="submit" value="Submit" class="button" >
+                <input type="reset" value="Cancel" class="button">
+            </div>
+            </form>
+            
+            
+        </fieldset>
+        
+        <div class="bottom">
+            <p>
+                <b>Copyrigrt &copy; 2018 Le Delicieux, SriLanka | All rights Reserved.2018</b>
+            </p>
+        </div>      
+    
+    </body>
+
+</html>

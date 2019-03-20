@@ -1,0 +1,190 @@
+<html>
+
+<head>
+<style>
+    
+.color1{
+background:linear-gradient(to right,#424242,#9e9e9e,#ffcc80,#f57c00);
+    width:1350px;
+    height:100px;
+    margin-top: 50px;
+      border: solid black 2px;
+}    
+
+ body{
+background-color:#616161;        
+ }
+   
+.social{
+    float: left;
+    margin-top: -30px;
+    
+   }
+.social ul li{
+    list-style: none;
+}
+.social ul li a img{
+    border-radius: 40px;
+    background-color: azure;
+}
+.social ul li a img:hover{
+    background-color: darkorange;
+}
+    
+    h1{
+        color:#bf360c;
+        font-family:cursive;
+        text-align: center;
+        font-style:italic;
+        
+    }
+    
+    p{
+    color: #bf360c;
+        font-family: monospace;
+        text-align: center;
+        margin-top: -20px;
+        font-size:15px;
+        font-weight: bold;
+          } 
+    
+    .logo{
+        width: 150px;
+        height:150px;
+        border:solid black 2px;
+        margin-top: -125px;
+        margin-left: 300px;
+        -webkit-animation-name:anim;
+        -webkit-animation-duration:4s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-direction:alternate;    
+    }
+    
+    @-webkit-keyframes anim{
+        0%{-webkit-transform:rotate(-20deg);
+        }
+        
+        100%{-webkit-transform:rotate(20deg);
+            
+            }
+    }
+    
+     
+    .menu{
+        
+        overflow: hidden;
+       background:linear-gradient(to right,#424242,#9e9e9e,#424242);
+        float: right;
+        margin-top: -40px;
+        border:1px solid white;
+    } 
+    
+    .menu a{
+        float:left;
+        color:darkorange;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 8px 16px;
+        font-family: sans-serif;
+    }
+    
+    .dropdown{
+        float:left;
+        overflow:hidden;
+    }
+    
+    .dropdown .dropbtn{
+        border:none;
+        outline:none;
+        color: darkorange;
+        font-size: 16px;
+        padding: 8px 16px;
+        background-color:inherit;
+        margin:0;
+         font-family: sans-serif;
+    }
+    
+    .menu a:hover, .dropdown:hover .dropbtn{
+        background-color: black;
+        
+    }
+    
+    .content{
+        display:none;
+        position: absolute;
+        background-color: #bdbdbd;
+        z-index: 1;
+    }
+    
+    .content a{
+        float:none;
+         display:block;
+        color:darkorange;
+        text-align: left;
+        padding: 6px 16px;
+        
+    }
+    
+    .content a:hover{
+        background-color: #424242;
+    }
+    
+    .dropdown:hover .content{
+        display: block;
+    }
+    
+    
+ 
+  
+ </style>
+
+</head>
+
+
+<body>
+    <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="images/97.png" width="45" height="45"></a></li>
+                    <li><a href="https://twitter.com/"><img src="images/91.png" width="45" height="45"></a></li>
+                    <li><a href="https://www.linkedin.com/"><img src="images/93.png" width="45" height="45"></a></li>
+                </ul>
+            </div>
+    
+    <div class="menu">
+        <a href="slideshow.html" target="myframe">Home</a>
+        <div class="dropdown" >
+        <button class="dropbtn">Products</button>
+        <div class="content"> 
+            <a href="sandwitch.html" target="myframe">Sandwitches</a>
+            <a href="shorteat.html" target="myframe">Shorteats</a>
+            <a href="sweets.html" target="myframe">Sweets</a>
+            <a href="cakes.html" target="myframe">Cakes</a>
+            <a href="drinks.html" target="myframe">Drinks</a>
+            </div>
+        </div>
+        <a href="outlets.html" target="myframe">Outlets</a>
+               <div class="dropdown" >
+            <button class="dropbtn">About us</button>
+                   <div class="content" >
+                   <a href="acedemy.html" target="myframe">About acedemy</a>
+                    <a href="cafe.html" target="myframe">About us</a>
+                   </div>
+        </div>
+        </div>
+
+<div id class="color1">
+
+  <h1> Le Delicieux</h1>  
+   <p> To have many more interesting evenings</p> 
+    
+    <img src="images/bakery2.jpg" class="logo" >
+    
+</div>
+
+ 
+    
+</body>
+
+
+</html>
